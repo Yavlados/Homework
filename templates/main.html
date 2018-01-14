@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body2 %}
+    <div id = "headerwrap">
+        <div class="container">
+        <div class="row centered">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Выберите категорию</h2>
+            </div>
+            <br>
+            <a class="navbar-brand" href="{%url 'tovar_url'  %}">Просмотреть товары</a><br>
+            <a class="navbar-brand" href="{%url 'shop_url'  %}">Просмотреть магазины</a>
+        </div>
+        </div>
+    </div>
+{% endblock %}

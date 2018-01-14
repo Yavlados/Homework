@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Play|Oswald');
+
+body {
+    background-color: #ffffff;
+    font-family: "Calibri";
+    display: -webkit-flex;
+	display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    color: #23527c;
+    -webkit-font-smoothing: antialiased;
+
+    margin-top: 70px;
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: #f85c37;
+    font-family: Calibri;
+    font-weight: 200;
+}
+
+a:hover, a:focus {
+    color: #f0ad4e;
+    text-decoration: none;
+    outline: 0;
+}
+
+li {
+    text-align: center;
+}
+hr{
+    display: block;
+    height: 1px;
+    border:0;
+    border-top:1px solid #ffff00;
+    margin: 1em 0;
+    padding:0;
+}
+.centered{
+    text-align: center;
+}
+.navbar {
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #ffff00;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-inverse{
+    background: #333333;
+    border-color: #333333;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 20px;
+}
+.navbar-inverse .navbar-nav > .active > a {
+    color: #ff7878;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+#headerwrap{
+    margin-top: -10px;
+    padding-top: 20px;
+    background-attachment: fixed;
+    min-height: 1280px;
+}
+
+#headerwrap h1 {
+    margin-top: 100px;
+    color: darkred;
+    font-size: 70px;
+    font-weight:300;
+    letter-spacing: 3px;
+}
+
+#headerwrap h2 {
+    font-family: Oswald ;
+    margin-top: 50px;
+    text-align: center;
+    color: darkred;
+    font-size: 35px;
+    font-weight:300;
+    letter-spacing: 2px;
+}
+
+#headerwrap h3 {
+    font-family: Oswald ;
+    margin-right: 10px;
+    color: darkred;
+    font-size: 35px;
+    font-weight:100;
+    letter-spacing: 2px;
+
+}
+
+#headerwrap h4{
+    margin-top: 10px;
+    color: mediumblue;
+    font-family: Oswald;
+    margin-left:50px;
+    font-size: 30px;
+    font-weight:200;
+}
+
+#headerwrap h5{
+    color: #8a6d3b;
+    font-family: "Times New Roman";
+    font-size: 15px;
+    font-weight: 50;
+}
+#headerwrap p{
+    font-family:Cambria;
+    font-size: 20px;
+    font-weight:200;
+}
+
+.form-block
+{
+    font-family: "Arial";
+}
+
+.assortiment {
+    height: 100px;
+    width: 100%;
+    margin-top: 1%;
+    padding: 1%;
+    margin-bottom: 1%;
+    background-color: white;
+    text-align: left;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    resize: none;
+}
+
+.data-and-error {
+    display: inline-block;
+    width: 55%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+    border-color: #ffffff;
+    background-color: yellow;
+}
+
+.dropdown-toggle {
+    margin: 7px;
+    background-color: inherit;
+    border: none;
+}
+.span
+{
+     font-family: "Bungee";
+     color: #ffff00;
+     font-size: 270px;
+}
+
+.page-links {
+    border: 1px solid orangered;
+    border-radius: 4px;
+}
+
+
+a.aquo {
+    color: orangered;
+    font-size: 35px;
+}
+
+a.aquo:hover {
+    color: whitesmoke;
+}
+
+
+span.unavailable {
+    color: orangered;
+    font-size: 35px;
+}
+
+.current-page {
+    color: orangered;
+    border: 1px solid orangered;
+    border-radius: 3px;
+}
+
+span.current-page {
+    color: white;
+
+    background-color: orangered;
+}
+
+
+.page {
+    color: orangered;
+}
+
+
+.tovar-photo {
+     width: 39%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 1%;
+    margin: auto;
+    height: 100%;
+}
+
+.img-tovar {
+    width: 250px;
+    height: 250px;
+    border: 0 solid;
+    border-radius: 5px;
+    margin: auto;
+}
+
+
+.my-flex-container{
+
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end;
+    justify-content:flex-start;
+}
+
+.my-flex-block1{
+    background: #FFF;
+  padding: 3rem;
+  width: 20%;
+  text-align: center;
+}
+
+.my-flex-block{
+  padding: 3rem;
+  width: 100%;
+  text-align: center;
+
+}
+
+.my-flex-container1{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+
+.my-flex-container2{
+    flex-direction: row;
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+
+.my-flex-block2{
+    background: #FFF;
+  padding: 3rem;
+  width: 80%;
+  text-align: center;
+}
+.my-flex-block3{
+    background: #FFF;
+  padding: 3rem;
+  width: 10%;
+  text-align: center;
+}
+
+ .username {
+     font-family: "Bungee";
+     color: #f0ad4e;
+     margin-left: 20px;
+     font-size: 30px;
+ }
+
+ .comment {
+     font-family: Arial;
+     color: #23527c;
+     margin-left: 10px;
+     font-size: 15px;
+ }
+
+ .comment-label {
+     font-family: Oswald ;
+     margin-left:   50px;
+    color: darkred;
+    font-size: 35px;
+    font-weight:300;
+    letter-spacing: 2px;
+     margin-bottom: 20px;
+
+ }
+
+.add-button {
+    position: fixed;
+    right: 50%;
+    bottom: 5%;
+    font-size: 100%;
+    width: 120px;
+    height: 50px;
+    border: 2px solid darkgray;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button-tovar {
+     position: fixed;
+    right: 15%;
+    bottom: 5%;
+    font-size: 127%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.modal-content {
+    background-color: rgb(64, 64, 64);
+}
+
+.modal-dialog {
+    width: 45%;
+}
+
+.modal-title {
+    color: #999999;
+    text-align: center;
+}
+
+.add-form {
+    padding: 1%;
+    align-items: center;
+    border: 1px solid dimgray;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.fb_add {
+    margin-bottom: 3%;
+}
+
+.data-and-error {
+    display: inline-block;
+    width: 55%;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    {% load static %}
+    <link rel="stylesheet" href="static/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="static/Bootstrap/css/main.css">
+    <link rel="stylesheet" href="static/Bootstrap/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                </button>
+                <a class="navbar-brand" href="{%url 'main_url'  %}">Welcome!</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                            {% if request.user.is_authenticated %}
+                                    <span>{{ request.user.username }}</span>
+                                    <li><a href="{% url 'logout_url' %}">Выйти</a></li>
+                                  {% else %}
+                                     <li><a href="{% url 'login_url' %}">Вход</a></li>
+                                     <li><a href="{% url 'registration_url' %}">Регистрация</a></li>
+                                  {% endif %}
+                <li> <li><a href="{%url 'admin:index'  %}"><i class="fa fa-rocket fa-invert" aria-hidden="true"></i></a></li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% block body2 %}<!--Блок для всего остального-->
+
+    {% endblock %}
+    </body>
+</html>

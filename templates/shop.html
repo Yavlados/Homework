@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body2 %}
+    <div id="headerwrap">
+        <h2>Список товаров:</h2>
+    <br><br><br><br>
+      <div class="container">
+{% if object_list %}
+    <div class ="my-flex-container1">
+    <div class ="my-flex-block2">
+    <table class="table table-dark">
+    <tr>
+      <th scope="col">Название</th>
+      <th scope="col">Адрес</th>
+    </tr>
+ {% for shop in object_list %}
+     <tr>
+         <td>{{ shop.name_shop }}</td>
+         <td>{{ shop.adr_shop   }}</td>
+     </tr>
+ {% endfor %}
+
+    </table>
+    {% if is_paginated %}
+                <div class="pagination">
+                    <span class="page-links">
+                        {% if page_obj.has_previous %}
+                            <a class="aquo" href="/shop?page={{ page_obj.previous_page_number }}">&laquo;</a>
+                        {% else %}
+                            <span class="unavailable" href="">&laquo;</span>
+                        {% endif %}
+                        {% for page in page_obj.paginator.page_range %}
+                            {% if page %}
+                                {% ifequal page page_obj.number %}
+                                    <span class="current-page" href="">{{ page }}</span>
+                                {% else %}
+                                    <a href="/shop?page={{ page }}" class="page">{{ page }}</a>
+                                {% endifequal %}
+                            {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <a class="aquo" href="/shop?page={{ page_obj.next_page_number }}">&raquo;</a>
+                        {% else %}
+                            <span class="unavailable" href="">&raquo;</span>
+                        {% endif %}
+                        <span hidden id="per-page">{{ page_obj.paginator.per_page }}</span>
+                    </span>
+                </div>
+            {% endif %}
+{% else %}
+                  <h3></h3>
+            <p>Пока не добавлено ни одного магазина</p>
+{% endif %}
+    </div>
+ </div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body2 %}
+     <div id = "headerwrap">
+        <div class="my-flex-container1">
+            <div class="my-flex-block">
+                 <h3>{{ request.user.username }}, не желаете оставить отзыв?</h3>
+              <form method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+                  {{ form.as_p }}
+                    <button type="submit" id="btn_add">Добавить отзыв</button>
+              </form>
+            </div>
+        </div>
+     </div>
+{% endblock %}

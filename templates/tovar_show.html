@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body2 %}
+    <div id = "headerwrap">
+        <h2>{{ tovar.name_tovar }}</h2>
+    <div class ="my-flex-container2">
+        <div class = "tovar-photo">
+         {% if tovar.photo_tovar %}
+                <img class = "img-tovar"  src="{{ tovar.photo_tovar.url}}">
+         {% endif %}
+        </div>
+    </div>
+    <div class="my-flex-container">
+        <div class="my-flex-block1"><h3>Описание:  </h3></div>
+        <div class="my-flex-block">
+            <p>{{ tovar.opisanie_tovar }}</p>
+        </div>
+    </div>
+    <div class="comment-label">Отзывы:</div>
+            {% for feedback in fb %}
+                <div class ="username">{{ feedback.fb_users.username  }}</div>
+                <div class ="comment">{{ feedback.information }}</div>
+                {%  if feedback.photo %}
+                    <img src="{{ feedback.photo.url }}">
+                {% endif %}
+            {% endfor %}
+    {% if user.is_superuser %}
+            <a href="{% url 'course_add_url' %}">
+                <div class="add-button">&plus;</div>
+            </a>
+            <a href="#course-add-modal" data-toggle="modal">
+                <div class="add-button" style="color: orangered; bottom: 10%; border-color: orangered">&plus;</div>
+            </a>
+    {% endif %}
+    </div>
+{% endblock %}
+
